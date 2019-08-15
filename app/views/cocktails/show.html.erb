@@ -1,0 +1,11 @@
+<li> <%= @cocktail.name%> </li>
+
+<% @cocktail.doses.each do |d| %>
+  <%= d.ingredient.name %>
+<% end %>
+
+<p class="btn btn-default"><%= link_to "Go back", cocktails_path %></p>
+
+<%= link_to "destroy", cocktail_path(@cocktails),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>

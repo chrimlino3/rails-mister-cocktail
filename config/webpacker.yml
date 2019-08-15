@@ -1,4 +1,4 @@
-# Note: You must restart bin/webpack-dev-server for changes to take effect
+\# Note: You must restart bin/webpack-dev-server for changes to take effect
 
 default: &default
   source_path: app/javascript
@@ -92,4 +92,4 @@ production:
   extract_css: true
 
   # Cache manifest.json for performance
-  cache_manifest: true
+  # cache_manifest: true
