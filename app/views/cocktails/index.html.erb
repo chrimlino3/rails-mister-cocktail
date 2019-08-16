@@ -3,9 +3,9 @@
 </div>
 
 <div class="cocktail-container">
-  <div class="grid-container">
+  <div class="row">
     <% @cocktails.each do |cocktail| %>
-    <div class="card" style="width: 18rem;">
+    <div class="card col-xs-12 col-sm-3">
       <img class="card-img-top" src="https://static.vinepair.com/wp-content/uploads/2019/01/2019cocktails_internal_amarettosour.jpg" alt="Card image cap">
       <%= link_to cocktail.name, cocktail_path(cocktail) %>
     </div>

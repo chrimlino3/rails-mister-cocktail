@@ -1,14 +1,20 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
 
 <%= simple_form_for(@cocktail) do |f| %>
-<div class="form-inputs">
-  <%= f.input :name %>
-  <%= f.submit %>
-</div>
+  <%= f.label :name, class: 'label-block' %>
+  <%= f.input :name, label: false %>
+  <%= f.submit :submit, class: 'btn btn-primary' %>
 <% end %>
 
+  </div>
+ </div>
+<div id="link-new-cocktail">
+<%= link_to "Back", cocktails_path, class: "btn btn-warning active text-center"%>
+</div>
 
+</div>
 
-
-<%= link_to "Homepage", cocktails_path %>
 
 

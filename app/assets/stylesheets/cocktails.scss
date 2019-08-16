@@ -1,5 +1,9 @@
 body {
-  background-color: #A69658;
+  background-color: #748067;
+}
+
+.btn {
+  list-style: none;
 }
 
 .home-banner {
@@ -12,23 +16,60 @@ body {
   padding-top: 40vh;
 }
 
+.dose-form {
+  display: block
+}
+
+.card {
+  padding: 0px;
+  margin-top: 20px;
+  margin-left: 20px;
+  list-style: none;
+  text-align: center;
+  text-decoration: none;
+}
+
 h1 {
   color: #795C5F;
   font-size: 50px;
+  display: grid;
+  justify-content: center;
 
 }
 
 .cocktail-container {
   margin: 0px auto;
+  position: center;
 
 }
 
 #link-new-cocktail {
+  display: grid;
+  position: relative;
   margin: 0px auto;
-  content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+.recipe {
+  list-style: none;
+  color: black;
+  justify-content: center;
 }
+
+// .grid-container {
+//   display: grid;
+//   grid-template-columns: 1fr 1fr 1fr;
+//   justify-content: center;
+// }
+
+.new_cocktail {
+  margin-top: 20px;
+}
+
+label.label-block {
+  display: block !important;
+}
+

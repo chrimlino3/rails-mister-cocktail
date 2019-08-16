@@ -1,18 +1,30 @@
-<li> <%= @cocktail.name%> </li>
+<h1> Recipes </h1>
 
+<div class="recipe">
+<li> <%= @cocktail.name%> </li>
+<
 <% @cocktail.doses.each do |d| %>
 <%= d.ingredient.name %>
 <%= d.description %>
+
+
 <%= link_to "DELETE", dose_path(d.id), method: :delete, data: { confirm: "Are you sure?" }%>
 <% end %>
+</div>
+
 
 <p class="btn btn-default"><%= link_to "Go back", cocktails_path %></p>
 
-<h3>Add a new dose</h3>
-<%= simple_form_for [@cocktail, @dose] do |f| %>
-  <%= f.association :ingredient, input_html: { class: "beautiful-dropdown" }, include_hidden: false %>
-  <%= f.input :description %>
-  <%= f.button :submit, class: "btn btn-primary" %>
-<% end %>
-
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <h3>Add a new dose</h3>
+      <%= simple_form_for [@cocktail, @dose] do |f| %>
+      <%= f.association :ingredient, input_html: { class: "beautiful-dropdown" }, include_hidden: false %>
+      <%= f.input :description %>
+      <%= f.button :submit, class: "btn btn-primary" %>
+      <% end %>
+      <div>
+      </div>
+    </div>
 

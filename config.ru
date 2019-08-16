@@ -1,5 +1,12 @@
-# This file is used by Rack-based servers to start the application.
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
 
-require_relative 'config/environment'
+development:
+  <<: *default
+  database: rails-mister-cocktail_development
 
-run Rails.application
+test:
+  <<: *default
+  database: rails-mister-cocktail_test
