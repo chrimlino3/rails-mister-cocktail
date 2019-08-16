@@ -1,19 +1,24 @@
 <h1> Recipes </h1>
 
-<div class="recipe">
-<li> <%= @cocktail.name%> </li>
-<
+<div class="recipe-body">
+    <li> <%= @cocktail.name%> </li>
+</div>
+
+<div class="doses-body">
 <% @cocktail.doses.each do |d| %>
 <%= d.ingredient.name %>
 <%= d.description %>
 
+<div class="btn btn-secondary"><%= link_to "DELETE", dose_path(d.id), method: :delete, data: { confirm: "Are you sure?" }%>
 
-<%= link_to "DELETE", dose_path(d.id), method: :delete, data: { confirm: "Are you sure?" }%>
-<% end %>
 </div>
+<div class="btn btn-secondary"><%= link_to "BACK", cocktails_path %>
+</div>
+</div>
+<% end %>
 
 
-<p class="btn btn-default"><%= link_to "Go back", cocktails_path %></p>
+
 
 <div class="container">
   <div class="row justify-content-center">

@@ -6,15 +6,16 @@
   <div class="row">
     <% @cocktails.each do |cocktail| %>
     <div class="card col-xs-12 col-sm-3">
-      <img class="card-img-top" src="https://static.vinepair.com/wp-content/uploads/2019/01/2019cocktails_internal_amarettosour.jpg" alt="Card image cap">
-      <%= link_to cocktail.name, cocktail_path(cocktail) %>
+      <img class="card-img-top" src=
+      https://static.vinepair.com/wp-content/uploads/2019/01/2019cocktails_internal_amarettosour.jpg" alt="Card image cap">
+      <div class="card-body"> <%= link_to cocktail.name, cocktail_path(cocktail) %></div>
     </div>
     <% end %>
   </div>
 </div>
 
 <div id="link-new-cocktail">
-  <%= link_to "Add a new cocktail", new_cocktail_path, class: "btn btn-warning active text-center" %>
+  <%= link_to "Add a new cocktail", new_cocktail_path, class: "btn btn-secondary active text-center" %>
 </div>
 
 

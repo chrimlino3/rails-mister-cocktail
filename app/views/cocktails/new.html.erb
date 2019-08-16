@@ -3,15 +3,14 @@
     <div class="col-md-8">
 
 <%= simple_form_for(@cocktail) do |f| %>
-  <%= f.label :name, class: 'label-block' %>
-  <%= f.input :name, label: false %>
-  <%= f.submit :submit, class: 'btn btn-primary' %>
+  <%= f.input :name, label_html: { class: 'label_class' } %>
+  <%= f.submit :submit, class: 'btn btn-secondary' %>
 <% end %>
 
   </div>
  </div>
 <div id="link-new-cocktail">
-<%= link_to "Back", cocktails_path, class: "btn btn-warning active text-center"%>
+<%= link_to "Back", cocktails_path, class: "btn1 btn-secondary active text-center"%>
 </div>
 
 </div>
