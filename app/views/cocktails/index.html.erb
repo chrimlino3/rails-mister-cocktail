@@ -1,13 +1,20 @@
-<h1>Tiki bar</h1>
+<div class="home-banner">
+  <h1>BarCode</h1>
+</div>
 
-<ul class="list-group">
-  <% @cocktails.each do |cocktail| %>
-    <li class="list-group-it">
+<div class="cocktail-container">
+  <div class="grid-container">
+    <% @cocktails.each do |cocktail| %>
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="https://static.vinepair.com/wp-content/uploads/2019/01/2019cocktails_internal_amarettosour.jpg" alt="Card image cap">
       <%= link_to cocktail.name, cocktail_path(cocktail) %>
-    </li>
-  <% end %>
-</ul>
+    </div>
+    <% end %>
+  </div>
+</div>
 
-<p class="btn btn-default"><%= link_to "Add a new cocktail", new_cocktail_path %></p>
+<div id="link-new-cocktail">
+  <%= link_to "Add a new cocktail", new_cocktail_path, class: "btn btn-warning active text-center" %>
+</div>
 
 
